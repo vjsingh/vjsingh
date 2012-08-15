@@ -1,0 +1,16 @@
+# Compile Jade
+cake jade:compile
+
+# Compile Less
+lessc app/css/styles.less dist/debug/styles.less.css
+
+# Compile js
+node static/js/libs/r.js -o name=main mainConfigFile=static/js/config.js out=dist/debug/require.js baseUrl=./static/js/
+
+# Concatenate 3 needed js files
+cat static/js/libs/require.js static/js/templates.js dist/debug/require.js > dist/debug/venmo.app.js
+
+# Minify js and css
+grunt release
+
+cp -r dist/release static/

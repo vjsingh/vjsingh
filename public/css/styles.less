@@ -1,0 +1,109 @@
+@import "reset.less";
+@import "elements.less";
+@import "grid.less";
+
+/* Grid */
+@column-width: 80;
+@gutter-width: 0;
+@columns: 12;
+
+//This is for a fluid layout
+@total-width: 100%;
+
+body {
+  //font-family: 'Peralta', cursive;
+  font-family: 'Quando', serif;
+  font-size: 40px;
+  color: white;
+}
+
+#home {
+  .name {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 20px;
+    text-align: center;
+    width: 290px;
+    margin-left: -145px - 6px; // Center
+    span {
+      color: black;
+    }
+    z-index: 90;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  .main-page-squares {
+    .main-page-square-mixin(@background-color) {
+      position: absolute;
+      height: 50%;
+      width: 50%;
+      z-index: 10;
+      .transition-duration(1s);
+      background-color: @background-color;
+
+      //&:hover {
+        //background-color: darken(@background-color, 10%);
+        ////.inner-shadow(0, 1, 2, 0.4);
+        //-moz-box-shadow: inset 0 0 5px 5px #888;
+        //-webkit-box-shadow: inset 0 0 5px 5px#888;
+        //box-shadow: inset 0 0 5px 5px #888;
+      //}
+
+      .text {
+        // Center text vertically
+        position: relative;
+        top: 50%;
+        height: 100px;
+        margin-top: -50px;
+        line-height: 100px;
+
+        text-align: center;
+      }
+
+    }
+
+    .projects {
+      top: 0;
+      left: 0;
+      .main-page-square-mixin(#6B1919);
+    }
+    .music {
+      top: 0;
+      left: 50%;
+      .main-page-square-mixin(#925E00);
+    }
+    .about {
+      bottom: 0;
+      left: 0;
+      .main-page-square-mixin(#0B7C6F);
+    }
+    .contact {
+      bottom: 0;
+      left: 50%;
+      .main-page-square-mixin(#2E0F5C);
+    }
+  }
+}
+
+.square-content {
+  font-size: 18px;
+}
+
+#projects {
+  .project-container {
+    margin: 50px 75px;
+    .project-image {
+      width: 30%;
+      float: left;
+    }
+    .title {
+      padding-bottom: 20px;
+    }
+    .project-description {
+      width: 60%;
+      float: left;
+    }
+  }
+}

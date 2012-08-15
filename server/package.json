@@ -1,0 +1,33 @@
+{
+  "name": "VarunSingh",
+  "description": "Varuns site",
+  "version": "0.0.1-1",
+  "author": "Varun Singh <Varun_Singh@brown.edu>",
+  "main": "server.js",
+  "scripts": {
+    "start": "server.js"
+  },
+  "engines": {
+    "node": ">= 0.4.0",
+    "npm": "1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vjsingh/vjsingh"
+  },
+  "dependencies": {
+    "less": "1.1.x",
+    "mongoose": "2.4.x",
+    "stylus": "0.21.x",
+    "jade": "0.20.x",
+    "connect-mongodb": "1.1.x",
+    "jslint": "0.1.x",
+    "express": "2.5.x",
+    "validator": "0.3.9",
+    "express-validator": "0.1.x",
+    "connect-mongo": "0.1.x",
+    "ua-parser": "0.2.x",
+    "watch-less": "0.0.x",
+    "jquery": "1.6.x"
+  }
+}
